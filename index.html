@@ -6,15 +6,13 @@
   <title>Cảm Xúc Club — Tuyển Thành Viên CLB Âm Nhạc Hạ Long</title>
   <meta name="description" content="Tuyển thành viên CLB Âm Nhạc Cảm Xúc tại Hạ Long. Sân khấu acoustic bên bờ biển ngắm trọn vịnh Hạ Long. Casting liên tục đến 30/11/2026.">
 
-  <!-- Open Graph / Meta Social -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Cảm Xúc Club — Tuyển Thành Viên CLB Âm Nhạc Hạ Long">
   <meta property="og:description" content="Chạm giai điệu, gọi yêu thương. Tham gia cùng chúng mình tại các đêm nhạc acoustic bên bờ biển Hạ Long!">
-  <meta property="og:image" content="images/dem-cam-xuc-ben-bien.png">
+  <meta property="og:image" content="dem-cam-xuc-ben-bien.jpg">
   <meta property="og:type" content="website">
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-
-  <!-- Google Fonts: Be Vietnam Pro (Hiện đại, tròn trịa, hỗ trợ tiếng Việt hoàn hảo) & Playfair Display (Nghệ thuật, cảm xúc) -->
+  <!-- Google Fonts: Be Vietnam Pro & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
@@ -54,12 +52,13 @@
       align-items: center;
       justify-content: space-between;
       padding: 16px clamp(18px, 6vw, 72px);
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
     }
     .brand {
       display: flex;
@@ -70,11 +69,12 @@
       letter-spacing: .03em;
       color: var(--primary);
     }
-    .brand img {
-      width: 40px;
-      height: 40px;
+    .brand-logo-svg {
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(232, 85, 132, 0.2);
+      box-shadow: 0 4px 10px rgba(232, 85, 132, 0.25);
+      flex-shrink: 0;
     }
     nav {
       display: flex;
@@ -93,11 +93,11 @@
       color: var(--accent);
     }
     .nav-cta {
-      padding: 10px 20px;
+      padding: 10px 22px;
       background: var(--primary);
       color: #fff !important;
       border-radius: 999px;
-      transition: all .2s;
+      transition: all .25s ease;
     }
     .nav-cta:hover {
       background: var(--accent);
@@ -253,7 +253,7 @@
       bottom: 14px;
       left: 14px;
       right: 14px;
-      background: rgba(18, 32, 64, 0.82);
+      background: rgba(18, 32, 64, 0.85);
       backdrop-filter: blur(8px);
       color: #fff;
       padding: 8px 14px;
@@ -437,7 +437,19 @@
   <!-- HEADER -->
   <header>
     <a href="#" class="brand">
-      <img src="images/logo.svg" alt="Logo Cảm Xúc Club">
+      <!-- INLINE SVG LOGO: NEVER BREAKS OR DISAPPEARS -->
+      <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="42" height="42">
+        <defs>
+          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e85584"/>
+            <stop offset="100%" stop-color="#15284f"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="#fff5f8" stroke="#f4b2c7" stroke-width="2"/>
+        <path d="M42 66 A 9 9 0 1 1 33 57 A 9 9 0 0 1 42 66 Z" fill="url(#logoGrad)"/>
+        <path d="M40 64 L40 26 C40 24 41 23 43 23 L65 20 C67 20 68 21 68 23 L68 56 A 9 9 0 1 1 59 47 A 9 9 0 0 1 68 56 Z" fill="url(#logoGrad)"/>
+        <polygon points="40,25 68,22 68,32 40,35" fill="url(#logoGrad)"/>
+      </svg>
       <span>CẢM XÚC CLUB</span>
     </a>
     <nav>
@@ -477,23 +489,23 @@
       
       <div class="gallery-grid">
         <div class="gallery-item g-featured">
-          <img src="images/dem-cam-xuc-ben-bien.png" alt="Toàn cảnh sân khấu Cảm Xúc Club bên bờ biển Hạ Long lung linh ánh đèn">
+          <img src="dem-cam-xuc-ben-bien.jpg" onerror="this.onerror=null; this.src='images/dem-cam-xuc-ben-bien.jpg';" alt="Toàn cảnh sân khấu Cảm Xúc Club bên bờ biển Hạ Long lung linh ánh đèn">
           <div class="overlay-tag">Sân khấu ngắm trọn vịnh biển Hạ Long</div>
         </div>
         <div class="gallery-item g-side">
-          <img src="images/ca-si-toa-sang.png" alt="Ca sĩ CLB biểu diễn trong vòng tay khán giả">
+          <img src="ca-si-toa-sang.jpg" onerror="this.onerror=null; this.src='images/ca-si-toa-sang.jpg';" alt="Ca sĩ CLB biểu diễn trong vòng tay khán giả">
           <div class="overlay-tag">Giao lưu & kết nối khán giả</div>
         </div>
         <div class="gallery-item g-third">
-          <img src="images/dem-hoi-cam-xuc-club.png" alt="MC và ca sĩ nam thăng hoa dưới ánh đèn vòm">
+          <img src="dem-hoi-cam-xuc-club.jpg" onerror="this.onerror=null; this.src='images/dem-hoi-cam-xuc-club.jpg';" alt="MC và ca sĩ nam thăng hoa dưới ánh đèn vòm">
           <div class="overlay-tag">Đêm nhạc định kỳ</div>
         </div>
         <div class="gallery-item g-third">
-          <img src="images/dem-san-khau-cam-xuc.png" alt="Nữ ca sĩ biểu diễn Live Show Dáng hình của Yêu Thương">
+          <img src="dem-san-khau-cam-xuc.jpg" onerror="this.onerror=null; this.src='images/dem-san-khau-cam-xuc.jpg';" alt="Nữ ca sĩ biểu diễn Live Show Dáng hình của Yêu Thương">
           <div class="overlay-tag">Live Show "Dáng hình của Yêu Thương"</div>
         </div>
         <div class="gallery-item g-third">
-          <img src="images/dem-hoi-cam-xuc-bien.png" alt="Góc nhìn toàn cảnh đêm nhạc đầm ấm">
+          <img src="dem-hoi-cam-xuc-bien.jpg" onerror="this.onerror=null; this.src='images/dem-hoi-cam-xuc-bien.jpg';" alt="Góc nhìn toàn cảnh đêm nhạc đầm ấm">
           <div class="overlay-tag">Không khí ấm áp & gắn kết</div>
         </div>
       </div>
